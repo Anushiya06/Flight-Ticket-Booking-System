@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #1c2940;
+  background: #f4f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 52px max(24px, calc((100% - 1160px) / 2));
+  color: white;
+  background: linear-gradient(120deg, #14264c, #2457a6);
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #6c83aa;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.hero .eyebrow {
+  color: #b9d1ff;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.hero-description {
+  margin: 16px 0 0;
+  max-width: 600px;
+  color: #dce8ff;
+  line-height: 1.7;
+}
+
+.hero-icon {
+  font-size: 5rem;
+  opacity: 0.9;
+  transform: rotate(-12deg);
+}
+
+.container {
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 28px 0 12px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.summary-card,
+.panel,
+.flight-card {
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 5px 22px rgb(26 47 83 / 4%);
+}
+
+.summary-card {
+  padding: 22px;
+}
+
+.summary-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #68758b;
+  font-size: 0.9rem;
+}
+
+.summary-card strong {
+  font-family: "Manrope", sans-serif;
+  font-size: 2rem;
+}
+
+.panel {
+  margin-bottom: 24px;
+  padding: 26px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.45rem;
+  letter-spacing: -0.025em;
+}
+
+.section-description {
+  margin: 8px 0 0;
+  color: #68758b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.section-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 12px;
+  color: #2457a6;
+  background: #edf3ff;
+  font-size: 1.6rem;
+}
+
+.flight-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
+  gap: 16px;
+}
+
+.form-field,
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  color: #35445c;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #d9e1ed;
+  border-radius: 9px;
+  outline: none;
+  color: #1c2940;
+  background: white;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input::placeholder {
+  color: #a0aabd;
+}
+
+input:focus {
+  border-color: #3266bc;
+  box-shadow: 0 0 0 3px rgb(50 102 188 / 12%);
+}
+
+input:disabled {
+  background: #f3f5f8;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.button-primary {
+  color: white;
+  background: #2457a6;
+}
+
+.button-primary:hover:not(:disabled) {
+  background: #1a4387;
+}
+
+.button-secondary {
+  border-color: #dce4ef;
+  color: #34445d;
+  background: white;
+}
+
+.button-secondary:hover:not(:disabled) {
+  background: #f4f7fc;
+}
+
+.button-danger {
+  min-height: 34px;
+  padding: 7px 11px;
+  border-color: #f3d3d3;
+  color: #b42323;
+  background: #fff5f5;
+}
+
+.button-danger:hover:not(:disabled) {
+  background: #ffe8e8;
+}
+
+.add-button {
+  min-width: 125px;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.flight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.flight-card {
+  min-width: 0;
+  padding: 20px;
+}
+
+.flight-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.flight-symbol {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 11px;
+  color: #2457a6;
+  background: #edf3ff;
+  font-size: 1.25rem;
+}
+
+.status {
+  padding: 6px 9px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.status-available {
+  color: #13734b;
+  background: #e8f8ef;
+}
+
+.status-full {
+  color: #a83c32;
+  background: #fff0ee;
+}
+
+.flight-label {
+  margin: 0 0 5px;
+  color: #7d8ba1;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.flight-card h3 {
+  margin: 0 0 20px;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.55rem;
+}
+
+.seat-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding: 14px 0;
+  border-top: 1px solid #edf0f5;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.seat-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.seat-details span {
+  color: #68758b;
+  font-size: 0.78rem;
+}
+
+.seat-details strong {
+  font-size: 1.15rem;
+}
+
+.booking-form {
+  gap: 9px;
+}
+
+.empty-state {
+  padding: 34px 16px;
+  border: 1px dashed #dce4ef;
+  border-radius: 12px;
+  color: #68758b;
+  text-align: center;
+}
+
+.empty-state h3 {
+  margin: 10px 0 6px;
+  color: #35445c;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.empty-icon {
+  font-size: 2rem;
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding: 14px 16px;
+  border: 1px solid;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.notice-success {
+  border-color: #b8e6cb;
+  color: #146c43;
+  background: #edfaf2;
+}
+
+.notice-error,
+.inline-error {
+  border-color: #f0c4c4;
+  color: #a12626;
+  background: #fff5f5;
+}
+
+.notice-error {
+  border: 1px solid #f0c4c4;
+}
+
+.notice-close {
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font-size: 1.4rem;
+}
+
+.inline-error {
+  margin-bottom: 16px;
+  padding: 12px;
+  border: 1px solid;
+  border-radius: 9px;
+  overflow-wrap: anywhere;
+}
+
+.inline-error p {
+  margin-bottom: 0;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #edf0f5;
+  white-space: nowrap;
+}
+
+th {
+  color: #68758b;
+  background: #f8faff;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+td {
+  font-size: 0.9rem;
+}
+
+.footer {
+  padding: 10px 0 28px;
+  color: #8290a5;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .flight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    padding: 34px 20px;
+  }
+
+  .hero-icon {
+    font-size: 3rem;
+  }
+
+  .container {
+    width: calc(100% - 24px);
+    padding-top: 16px;
+  }
+
+  .summary-grid {
+    gap: 8px;
+  }
+
+  .summary-card {
+    padding: 13px;
+  }
+
+  .summary-label {
+    font-size: 0.75rem;
+  }
+
+  .summary-card strong {
+    font-size: 1.45rem;
+  }
+
+  .panel {
+    padding: 17px;
+  }
+
+  .flight-form,
+  .flight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+env/
+sdk-env/
+.venv/
+.pytest_cache/
+
+# Local database
+backend/flights.db
+backend/*.db
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+
+# Generated SDK build files
+flight_sdk/.venv/
+flight_sdk/*.egg-info/
+
+# Environment secrets
+.env
+
+# Editor files
+.vscode/
